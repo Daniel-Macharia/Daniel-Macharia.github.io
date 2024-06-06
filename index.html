@@ -3,122 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title style="color: blueviolet;">Daniel Macharia</title>
+    <link rel="stylesheet" type="text/css" href="homeStyle.css"/>
+    <title>Daniel Macharia</title>
 </head>
-<body class="html-body" >
-    <div id="body-top-bar">
-        <span>
-            <a href="about.html">
-                <button class="top-bar-button">
-                    About
-                </button>
-            </a>
-            <a href="portfolio.html">
-                <button class="top-bar-button">
-                    Portfolio
-                </button>
-            </a>
-            <a href="resume.html">
-                <button class="top-bar-button">
-                    Resume
-                </button>
-            </a>
-            <a href="contact.html">
-                <button class="top-bar-button">
-                    Contact
-                </button>
-            </a>
-            
-        </span>
-    </div>
-    <div id="body-content">
-        <span >
-            <img url="images/blue_bg.png"/>
-        </span>
-        <span>
-            <p id="greeting-text">
-                Hello!
-            </p>
-            <p id="short-message">
-                I`m Daniel Macharia, a software engineer.
-                I major on mobile application development with java. I`m proficient
-                in other areas such as SQL Database design and implementation,
-                web development and desktop application development.
-            </p>
-            <a href="portfolio.html">
-                <button class="content-button">
-                    View Work
-                </button>
-            </a>
-            <a href="contact.html">
-                <button class="content-button">
-                    Hire me.
-                </button>
-            </a>
-        </span>
-        <span >
-            <img url="images/no_bg.png"/>
-        </span>
-    </div>
+<body>
+    <div class="container">
+        <div class="title-bar">
+            <div id="menus">
+                <a href="">
+                    <button class="menu-item">About</button>
+                </a>
+                <a href="">
+                    <button class="menu-item">Services</button>
+                </a>
+                <a href="">
+                    <button class="menu-item">Projects</button>
+                </a>
+                <a href="">
+                    <button class="menu-item">Testimonials</button>
+                </a>
+                <a href="">
+                    <button class="menu-item">Contact</button>
+                </a>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="main-content-text" >
+                <p class="text" >
+                    Hello!
+                </p>
+                <p class="text" >
+                    I am Daniel Macharia, a software engineer based in Kakamega.
+                    I have tailored several mobile applications including an mp3 player, 
+                    a mobile tic-tac-toe game and several other applications.
+                </p>
+                <p class="text" >
+                    I`m also a user interface designer, back and front-end web 
+                    developer.
+                </p>
+                <p class="text" >
+                    I have created several desktop applications as well using java 
+                    and the javaFX framework.
+                </p>
 
+                <div id="main-content-button">
+                    <button>View Work</button>
+                    <button>Hire Me</button>
+                </div>
+            </div>
+            <div id="main-content-image" >
+                <img src="images/no_bg.png" width="400px"/>
+            </div>
+        </div>
+    </div>
 </body>
-<style>
-    .html-body{
-        background-color: rgb(140, 53, 223);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    #body-top-bar{
-        background-color: transparent;
-        align-items: end;
-    }
-    .top-bar-button{
-        background-color: transparent;
-        color: rgb(255, 165, 0);
-        font-size: 16px;
-        border-style: none;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .top-bar-button:hover{
-        color: orange;
-    }
-
-    #body-content{
-        justify-items: center;
-    }
-
-    #greeting-text{
-        color: tomato;
-        font-family: Arial;
-        font-size: 24px;
-    }
-    #short-message{
-        color: tomato;
-        font-family: arial;
-        font-size: 16px;
-    }
-
-    .content-button{
-        color: black;
-        background-color: orange;
-        font-size: 16px;
-        border-radius: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-style: none;
-        display: flex;
-    }
-    .content-button:hover{
-        opacity: 0.8;
-    }
-
-</style>
+<footer>
+    <div id="footer-main-container">
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="images/linked_in_logo.png" width="32px" height="32px"/>
+                <button class="contact-item-button">Linked In</button>
+            </div>
+            <div class="contact-item">
+                <img src="images/email_logo.png" width="32px" height="32px"/>
+                <button class="contact-item-button">Email</button>
+            </div>
+            <div class="contact-item">
+                <img src="images/github_logo.png" width="32px" height="32px"/>
+                <button class="contact-item-button">Github</button>
+            </div>
+            
+        </div>
+        <div>
+            <p id="sign-by-author">
+                Prepared with &#10084; by Daniel Ndung'u Macharia.
+            </p>
+        </div>
+    </div>
+</footer>
 </html>
