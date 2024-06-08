@@ -1,3 +1,8 @@
+
+html{
+    background-color: lightsteelblue;
+}
+
 button{
     padding-left: 16px;
     padding-right: 16px;
@@ -18,16 +23,6 @@ button:active{
     opacity: 0.5;
 }
 
-
-footer{
-    background-color: lightsteelblue;
-}
-
-
-.container{
-    background-color: lightsteelblue;
-
-}
 
 /* Here is the style for the menu at the top*/
 
@@ -53,7 +48,6 @@ footer{
 
 /* Here is the style for the main page content*/
 #main-content{
-    background-color: lightsteelblue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -1,0 +1,42 @@
+
+.contact-pair{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.contact-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f8ff;
+    margin: 10px;
+    width: 240px;
+}
+
+.contact-info{
+    font-family: monospace;
+    color: black;
+    font-size: large;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.contact-number{
+    font-family: monospace;
+    font-size: large;
+    color: rgb(26, 152, 211);
+    text-align: center;
+}
+
+.contact-name{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-center;
+}
