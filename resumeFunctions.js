@@ -11,9 +11,9 @@ function downloadResume()
 {
     let resume = document.createElement('a');
     //add a href to the resume url
-    resume.href = "images/email_logo.png";
+    resume.href = "images/resume.pdf";
     //set the name for the downloaded resume
-    resume.download = "daniel-macharia-resume.png";
+    resume.download = "daniel-macharia-resume.pdf";
 
     //set the anchor style so that it does not appear on the body
     resume.style.display = "none";

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>
     document.querySelector('form').onsubmit = ()=>{
         //get input values
         const name = document.querySelector('#sender-name');
-        const mail = document.querySelector('#sender-mail-address');
+        const mail = document.querySelector('#sender-contact');
         const title = document.querySelector('#job-title');
         const desc = document.querySelector('#job-desc');
 

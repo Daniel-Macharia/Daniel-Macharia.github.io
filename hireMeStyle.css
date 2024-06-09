@@ -1,6 +1,10 @@
 
-html{
+body{
     background-color: lightsteelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 #container{
@@ -8,17 +12,19 @@ html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 240px;
 }
 
 
 form{
-    width: max-content;
     background-color: azure;
+    width: max-content;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
+    margin: 10px;
 }
 
 .input-prompt{
