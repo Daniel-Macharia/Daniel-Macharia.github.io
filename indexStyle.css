@@ -23,18 +23,75 @@ button:active{
     opacity: 0.5;
 }
 
+#options{
+    background-color: gray;
+    margin-top: 40px;
+}
+
+#container{
+    position: relative;
+    margin-top: 48px;
+}
+
+#menu-bar{
+    min-width: 100%;
+    max-width: 100%;
+    top: calc(0px);
+    z-index: 2;
+    max-height: 48px;
+    position: fixed;
+    background-color: lightsteelblue;
+}
 
 /* Here is the style for the menu at the top*/
 
-#menus{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
+@media screen and (orientation: portrait) {
+    /*#menus{
+        display: block;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }*/
+    #menu-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #potrait-menus{
+        display: block;
+        margin-right: 20px;
+    }
+    #options{
+        display: none;
+    }
+    #menus{
+        display: none;
+    }
+
 }
+
+@media  screen and (orientation: landscape) {
+    #menus{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #menu-icon{
+        display: none;
+    }
+    #options{
+        display: none;
+    }
+}
+
 
 .menu-item{
     background-color: transparent;

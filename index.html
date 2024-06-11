@@ -3,30 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="homeStyle.css"/>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css"/>
+    <script src="indexFunctionality.js" ></script>
     <title>Daniel Macharia</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title-bar">
-            <div id="menus">
-                <a href="about.html">
-                    <button class="menu-item">About</button>
-                </a>
-                <a href="services.html">
-                    <button class="menu-item">Services</button>
-                </a>
-                <a href="resume.html">
-                    <button class="menu-item">Resume</button>
-                </a>
-                <!--a href="">
-                    <button class="menu-item">Testimonials</button>
-                </a -->
-                <a href="contact.html">
-                    <button class="menu-item">Contact</button>
-                </a>
+    <div id="menu-bar">
+        <div id="potrait-menus">
+            <img id="menu-icon" src="images/menu-icon.svg" width="32px" height="32px"/>
+            <div id="options">
+                <option class="option" data-optionValue="about">about</option>
+                <option class="option" data-optionValue="services">services</option>
+                <option class="option" data-optionValue="resume">resume</option>
+                <option class="option" data-optionValue="contact">contact</option>
             </div>
         </div>
+        <div id="menus">
+            <a href="about.html">
+                <button class="menu-item">About</button>
+            </a>
+            <a href="services.html">
+                <button class="menu-item">Services</button>
+            </a>
+            <a href="resume.html">
+                <button class="menu-item">Resume</button>
+            </a>
+            <!--a href="">
+                <button class="menu-item">Testimonials</button>
+            </a -->
+            <a href="contact.html">
+                <button class="menu-item">Contact</button>
+            </a>
+        </div>
+    </div>
+    <div id="container">
+        
         <div id="main-content">
             <div id="main-content-text" >
                 <h3 class="text" >
