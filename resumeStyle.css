@@ -1,0 +1,61 @@
+html{
+    background-color: lightsteelblue;
+}
+
+#resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#resume-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;align-items: center;
+}
+
+#resume-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.resume-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.resume-body-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;    
+}
+
+#download-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(26, 152, 211);
+}
+
+#download-btn:hover{
+    opacity: 0.8;
+}
+
+#download-btn:active{
+    opacity: 0.4;
+}
+
+.resume-body-section{
+    width: 300px;
+}
