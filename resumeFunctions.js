@@ -28,13 +28,3 @@ function downloadResume()
     resume.remove();
 }
 
-
-function getLinks(){
-    return {
-        about:"about.html",
-        services:"services.html",
-        resume:"resume.html",
-        contact:"contact.html"
-    }
-}
-
