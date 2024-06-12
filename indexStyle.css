@@ -3,6 +3,10 @@ html{
     background-color: lightsteelblue;
 }
 
+body{
+    margin: 0px;
+}
+
 button{
     padding-left: 16px;
     padding-right: 16px;
@@ -23,50 +27,72 @@ button:active{
     opacity: 0.5;
 }
 
-#options{
-    background-color: gray;
-    margin-top: 40px;
+#option-div{
+    background-color: rgb(109, 140, 180);
+    margin-top: 48px;
+    border-bottom-left-radius: 10px;
+    padding: 4px;
+    margin-right: 0px;
 }
+#option-div a{
+    outline-style: none;
+}
+
+.option{
+    padding-left: 10px;
+    padding-right: 46px;
+    padding-top: 5px;
+    font-size: medium;
+    border-top: solid;
+    border-width: 1px;
+}
+.option:hover{
+    cursor: pointer;
+}
+
+#menu-icon{
+    margin-right: 30px;
+}
+
+
 
 #container{
     position: relative;
     margin-top: 48px;
 }
 
+#cancel{
+    color: white;
+    font-size: larger;
+    text-align: end;
+    font-family: monospace;
+    padding-right: 16px;
+    border: none;
+}
+
 #menu-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
     min-width: 100%;
     max-width: 100%;
     top: calc(0px);
     z-index: 2;
+    min-height: 48px;
     max-height: 48px;
     position: fixed;
-    background-color: lightsteelblue;
+    background-color: rgb(109, 140, 180);
+    margin-left: 0px;
 }
 
 /* Here is the style for the menu at the top*/
 
 @media screen and (orientation: portrait) {
-    /*#menus{
-        display: block;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }*/
-    #menu-bar{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-    }
     #potrait-menus{
         display: block;
-        margin-right: 20px;
-    }
-    #options{
-        display: none;
+        margin-right: 0px;
+        padding-right: 0px;
     }
     #menus{
         display: none;
@@ -75,6 +101,7 @@ button:active{
 }
 
 @media  screen and (orientation: landscape) {
+    
     #menus{
         display: flex;
         flex-direction: row;
@@ -84,10 +111,7 @@ button:active{
         padding-left: 20px;
         padding-right: 20px;
     }
-    #menu-icon{
-        display: none;
-    }
-    #options{
+    #potrait-menus{
         display: none;
     }
 }
@@ -143,6 +167,11 @@ button:active{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+
+footer{
+    max-height: 100vh;
 }
 
 #footer-main-container{

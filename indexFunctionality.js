@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
+  showMenuOptions(false);
 
   document.querySelectorAll('.option').forEach(
     option => {
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         //let val = selectedOption.style.dataset.optionValue;
         let val = option.value;
         console.log(`clicked ${val}`);
+        loadPage( getLinks()[val] );
         showMenuOptions(false);
       });
     }
@@ -19,13 +21,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
 function showMenuOptions(showOptions){
   if( showOptions )
   {
-    document.querySelector('#menu-icon').style.display = "none";
-    document.querySelector('#options').style.display = "block";
+    document.querySelector('#option-div').style.display = "block";
+    document.querySelector('#menu-icon').style.display = 'none';
   }
   else{
-    document.querySelector('#options').style.display = "none";
-    document.querySelector('#menu-icon').style.display = "block";
-    setMenuListener();
+    document.querySelector('#option-div').style.display = "none";
+    document.querySelector('#menu-icon').style.display = 'block';
   }
   
 }
@@ -37,3 +38,31 @@ function setMenuListener()
     showMenuOptions(true);
   });
 }
+
+
+function getLinks(){
+  return {
+       X:"#",
+      about:"about.html",
+      services:"services.html",
+      resume:"resume.html",
+      contact:"contact.html"
+  }
+}
+
+function loadPage(url)
+{
+  if( url === '#')
+  {
+    return;
+  }
+  let anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.style.display = "none";
+
+  document.querySelector('body').append(anchor);
+  anchor.click();
+
+  anchor.remove();
+}
+
