@@ -92,9 +92,7 @@ body{
 }
 
 .project img{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 
@@ -109,5 +107,13 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: baseline;
+}
+h1{
+    color: rgb(26, 152, 211);
 }
 
+.title{
+    color: rgb(26, 152, 211);
+    font-size: larger;
+}

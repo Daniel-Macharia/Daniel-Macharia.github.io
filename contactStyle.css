@@ -61,3 +61,7 @@ body div h3{
     flex-wrap: nowrap;
     justify-content: space-center;
 }
+
+h1{
+    color:rgb(26, 152, 211);
+}

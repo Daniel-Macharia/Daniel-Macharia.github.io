@@ -50,3 +50,7 @@ body p{
 .about-sub-section p{
     width: 300px;
 }
+
+h1{
+    color: rgb(26, 152, 211);
+}
