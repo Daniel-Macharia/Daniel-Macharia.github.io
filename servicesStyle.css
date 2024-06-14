@@ -30,7 +30,6 @@ body{
         width: 100%;
         height: 180px;
         padding: 10px;
-        padding-top: 0px;
         border-radius: 10px;
         display: flex;
         flex-direction: row;
@@ -80,7 +79,6 @@ body{
     .service{
         width: 240px;
         padding: 10px;
-        padding-top: 0px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
