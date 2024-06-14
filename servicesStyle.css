@@ -44,7 +44,7 @@ body{
     }
 
     .project{
-        width: 400px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -54,9 +54,15 @@ body{
         padding: 10px;
     }
     .project p{
+        width: 40%;
         margin: 10px;
         padding: 6px;
     }
+    .project img{
+        width: 60%;
+        border-radius: 10%;
+    }
+    
 
 }
 
@@ -82,6 +88,12 @@ body{
         margin: 10px;
         padding: 10px;
     }
+
+    .project img{
+        width: 240px;
+        border-radius: 10%;
+    }
+    
 }
 
 
@@ -89,10 +101,6 @@ body{
     width: 160px;
     height: 160px;
     border-radius: 50%;
-}
-
-.project img{
-    border-radius: 10%;
 }
 
 
