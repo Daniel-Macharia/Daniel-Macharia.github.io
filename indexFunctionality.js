@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     console.log('body clicked');
   });
 
-  loadFrames();
+  //loadFrames();
 });
 
 
@@ -81,12 +81,13 @@ function loadPage(url)
 
 function loadFrames()
 {
-  frameNumber = 1;
+  let frameNumber = 1;
   document.querySelectorAll('iframe').forEach(frame=>{
-    if( frameNumber % 2 != 0 )
-    {
-      frame.style.backgroundColor = "blue";
-    }
+    let component = document.createElement('html');
+    component.href = 'resume.html';
+
+    frame.height = "" + (4 * component.height);
+
     frameNumber++;
   });
 }

@@ -43,8 +43,8 @@ body p{
 
 @media screen and (orientation:portrait){
     .about-sub-section img{
-        width: 100%;
-        border-radius: calc(30%);
+        width: 60%;
+        border-radius: calc(50%);
         padding: 0px 20px 0px 20px;
     }
     
@@ -56,16 +56,22 @@ body p{
 
 @media screen and (orientation:landscape){
     .about-sub-section img{
-        width: 400px;
-        border-radius: calc(30%);
-        padding: 20px;
+        width: 40%;
+        height: 40%;
+        border-radius: calc(50%);
+        margin: 5%;
     }
     
     .about-sub-section p{
-        width: 300px;
+        width: 50%;
     }
 }
 
 h1{
     color: rgb(26, 152, 211);
+}
+
+#about-picture{
+    height: 40%;
+    border-radius: 50%;
 }
