@@ -6,6 +6,7 @@ html{
 body{
     width: 100%;
     margin: 0px;
+    height: 100%;
 }
 
 button{
@@ -29,7 +30,8 @@ button:active{
 }
 
 #option-div{
-    background-color: rgb(109, 140, 180);
+    /*background-color: rgb(109, 140, 180);*/
+    background-color: rgb(26, 152, 211);
     margin-top: 48px;
     border-bottom-left-radius: 10px;
     padding: 4px;
@@ -83,7 +85,7 @@ button:active{
     min-height: 48px;
     max-height: 48px;
     position: fixed;
-    background-color: rgb(109, 140, 180);
+    /*background-color: rgb(109, 140, 180);*/
     margin-left: 0px;
 }
 
@@ -104,6 +106,13 @@ button:active{
         font-size: 32px;
         padding-right: 100px;
     }
+
+    #menu-bar{
+    background-color: rgb(26, 152, 211);
+    }
+    .menu-item{
+        color: rgb(41, 10, 10);
+    }
 }
 
 @media  screen and (orientation: landscape) {
@@ -120,6 +129,12 @@ button:active{
     #potrait-menus{
         display: none;
     }
+    #menu-bar{
+        background-color: transparent;
+    }
+    .menu-item{
+    color: rgb(26, 152, 211);
+    }
 }
 
 
@@ -129,7 +144,7 @@ button:active{
     padding-right: 0px;
     font-family: Ariel;
     font-size: 24px;
-    color: rgb(0, 106, 155);
+    /*color: rgb(0, 106, 155);*/
 }
 
 
@@ -215,5 +230,22 @@ footer{
     padding-left: 4px;
     padding-right: 4px;
     background-color: transparent;
+}
+
+
+section{
+    
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: hidden;
+
+    width: 100vw;
+    height: 100dvh;
+    
+}
+
+iframe{
+    width: 100vw;
 }
 

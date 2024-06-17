@@ -14,7 +14,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   );
 
-  setMenuListener();
+  //setMenuListener();
+  document.querySelector('#menu-icon').onclick = ()=>{
+    showMenuOptions(true);
+    console.log('menu icon clicked');
+    return true;
+  };
+
+
+  document.querySelector('body').addEventListener('click', function(menuIcon){
+    //showMenuOptions(false);
+    console.log('body clicked');
+  });
+
+  loadFrames();
 });
 
 
@@ -43,10 +56,10 @@ function setMenuListener()
 function getLinks(){
   return {
        X:"#",
-      about:"about.html",
-      services:"services.html",
-      resume:"resume.html",
-      contact:"contact.html"
+      about:"#about-section",
+      services:"#services-section",
+      resume:"#resume-section",
+      contact:"#contact-section"
   }
 }
 
@@ -66,3 +79,14 @@ function loadPage(url)
   anchor.remove();
 }
 
+function loadFrames()
+{
+  frameNumber = 1;
+  document.querySelectorAll('iframe').forEach(frame=>{
+    if( frameNumber % 2 != 0 )
+    {
+      frame.style.backgroundColor = "blue";
+    }
+    frameNumber++;
+  });
+}
