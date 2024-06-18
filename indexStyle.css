@@ -40,7 +40,7 @@ button:active{
 }
 
 #option-div{
-    /*background-color: rgb(109, 140, 180);*/
+    display: none;
     background-color: rgb(26, 152, 211);
     margin-top: 48px;
     border-bottom-left-radius: 10px;
@@ -124,15 +124,6 @@ button:active{
     .menu-item{
         color: rgb(41, 10, 10);
     }
-
-    /*#main-content-image{
-        width: 80%;
-    }
-    #main-content-image img{
-        width: 80%;
-        margin: 20px;
-        border-radius: 50%;
-    }*/
 }
 
 @media  screen and (orientation: landscape) {
@@ -155,16 +146,6 @@ button:active{
     .menu-item{
     color: rgb(26, 152, 211);
     }
-
-    /*#main-content-image{
-        width: 40%;
-    }
-    #main-content-image img{
-        width: 100%;
-        height: 100%;
-        margin: 10px;
-        border-radius: 50%;
-    } */
 }
 
 
@@ -174,7 +155,6 @@ button:active{
     padding-right: 0px;
     font-family: Ariel;
     font-size: 24px;
-    /*color: rgb(0, 106, 155);*/
 }
 
 

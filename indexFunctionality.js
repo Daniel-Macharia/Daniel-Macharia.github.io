@@ -1,11 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  showMenuOptions(false);
 
   document.querySelectorAll('.option').forEach(
     option => {
       option.addEventListener('click', ()=>{
-        //let val = selectedOption.style.dataset.optionValue;
         let val = option.value;
 
         loadPage( getLinks()[val] );
@@ -14,17 +12,19 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
   );
 
-  //setMenuListener();
-  document.querySelector('#menu-icon').onclick = ()=>{
+  document.querySelector('#menu-icon').onclick = (menuClickEvent)=>{
     showMenuOptions(true);
-    console.log('menu icon clicked');
-    return true;
+    menuClickEvent.stopPropagation();
   };
 
 
   document.querySelector('body').addEventListener('click', function(menuIcon){
-    //showMenuOptions(false);
-    console.log('body clicked');
+    const menuOptionsShown = (document.querySelector('#option-div').style.display === 'none') ? false : true;
+
+    if( menuOptionsShown )
+    {
+      showMenuOptions(false);
+    }
   });
 
   document.querySelectorAll('.footer-contact-item').forEach(contact=>{
@@ -144,3 +144,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
     loadPage("project.html");
   });
 });
+
+
+//contact function
+document.addEventListener("DOMContentLoaded", ()=>{
+  document.querySelector('#phone-call').addEventListener('click', ()=>{
+    loadPage("tel:+254 712696965");
+  });
+
+  document.querySelector('#whatsapp-messenger').addEventListener('click', ()=>{
+    loadPage("https://wa.me/254712696965?text=Hello!%20I`m%20interested%20in%20your%20services.");
+  });
+
+});
+
+
