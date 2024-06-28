@@ -41,7 +41,7 @@ function getProject(id)
 
 function readFromCSVFile(path)
 {
-  fetch("./sample.json")
+  fetch(path)
   .then(response=>{
     let fileReader = response.body.getReader();
     let decoder = new TextDecoder();
