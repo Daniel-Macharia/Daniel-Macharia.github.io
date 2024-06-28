@@ -37,3 +37,57 @@ function getProject(id)
 
   return projectNode;
 }
+
+
+function readFromCSVFile(path)
+{
+  fetch("./sample.json")
+  .then(response=>{
+    let fileReader = response.body.getReader();
+    let decoder = new TextDecoder();
+    let currentLineData = "";
+    let totalLines = [];
+
+    fileReader.read()
+    .then( function readData(progress){
+
+      let data = decoder.decode(progress.value || "", {stream:progress.done});
+      let lines = data.split("\n");
+
+      if( lines.length < 2 )
+      {
+        currentLineData += lines[0];
+      }
+      else
+      {
+        lines.forEach(( element, index, array)=>{
+          currentLineData += element;
+          totalLines.push(currentLineData);
+
+          if( index < (lines.length - 1) )
+          {
+            currentLineData = "";
+          }
+
+        });
+      }
+
+      totalLines.forEach(line=>{
+        console.log(line);
+      });
+
+      totalLines = [];
+
+      if(progress.done)
+      {
+        console.log({done:progress.done});
+      }
+
+      return readData();
+
+    });
+  });
+}
+
+readFromCSVFile("./data.txt");
+
