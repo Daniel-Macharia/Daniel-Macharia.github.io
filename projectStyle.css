@@ -37,7 +37,7 @@ body h2{
   border-radius: 10px;
   max-width: 300px;
   padding: 10px;
-  max-height: 50%;
+  max-height: 60%;
 }
 
 
@@ -46,7 +46,7 @@ body h2{
   font-size: large;
   font-weight: bold;
   color: black;
-  max-height: 10%;
+  max-height: 8%;
 }
 
 .project-desc{
@@ -56,7 +56,8 @@ body h2{
   max-width: 300px;
   padding-left: 10px;
   padding-right: 10px;
-  max-height: 20%;
+  padding-bottom: 4px;
+  max-height: 18%;
 }
 
 .project-button-div{
@@ -64,11 +65,12 @@ body h2{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  max-height: 20%;
+  max-height: 14%;
 }
 
 @media screen and (max-width:300px)
@@ -81,8 +83,8 @@ body h2{
 
 .project-button{
   margin: 2px;
-  max-width: 50%;
-  max-height: 80%;
+  width: 40%;
+  max-height: 90%;
   border-radius: 0px;
   border-style: solid;
   border-width: 2px;
