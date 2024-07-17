@@ -42,7 +42,7 @@ function addProject(project)
 
   let projectDownloadButton = document.createElement('button');
   projectDownloadButton.className = "project-button";
-  projectDownloadButton.innerText = project.desc;//"Download App";
+  projectDownloadButton.innerText = "Download App";
 
   buttonDiv.append(projectSourceButton);
   buttonDiv.append(projectDownloadButton);
