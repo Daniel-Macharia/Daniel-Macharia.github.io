@@ -114,7 +114,7 @@ function readCSVFile(path)
       for( let line of lines )
       {
         console.log(
-          line.replace(/^([\w\s]+)(,)([\w\s]+)(,)([\w\s]+)(,)([\w\s]+)$/, (_, one, two, three, four, five, six, seven)=>{
+          line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven)=>{
             return JSON.stringify({"name": one, "desc": three, "githubLink": five, "downloadLink": seven});
           })
         );
