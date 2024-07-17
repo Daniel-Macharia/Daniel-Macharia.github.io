@@ -109,7 +109,17 @@ function readCSVFile(path)
   .then( text => {
     try
     {
-      console.log(text);
+      let lines = text.split(/\r?\n/);
+
+      for( let line of lines )
+      {
+        console.log(
+          line.replace(/^([\w\s]+)(,)([\w\s]+)(,)([\w\s]+)(,)([\w\s]+)$/, (_, one, two, three, four, five, six, seven)=>{
+            return JSON.stringify({"name": one, "desc": three, "githubLink": five, "downloadLink": seven});
+          })
+        );
+        console.log(`New Line: ${line}`);
+      }
     }catch( error )
     {
       console.log(`Error getting projects: ${error.message}`);
