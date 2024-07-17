@@ -89,5 +89,29 @@ function readFromCSVFile(path)
   });
 }
 
-readFromCSVFile("./data.txt");
+//readFromCSVFile("./data.txt");
 
+
+// import {readTextBasedData} from "portfolio_module";
+
+// readTextBasedData("./data.txt")
+// .then( response => { response.text() })
+// .then( text => {
+//   console.log(text);
+// });
+
+function readCSVFile(path)
+{
+  fetch(path)
+  .then( response => {
+    response.text();
+  })
+  .then( text => {
+    console.log(text);
+  })
+  .catch( error => {
+    console.log(`Error: ${error}`);
+  });
+}
+
+readCSVFile("./data.txt");
