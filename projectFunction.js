@@ -24,6 +24,16 @@ function addProject(project)
   let projectSourceButton = document.createElement('button');
   projectSourceButton.className = "project-button";
   projectSourceButton.innerText = "View Source Code";
+  projectSourceButton.dataset.link = project.githubLink;
+
+  projectSourceButton.addEventListener("click", btn => {
+    let aTag = document.createElement("a");
+    aTag.href = btn.dataset.link;
+
+    document.querySelector('body').append(aTag);
+    aTag.click();
+    aTag.remove();
+  });
 
   let projectDownloadButton = document.createElement('button');
   projectDownloadButton.className = "project-button";
@@ -32,10 +42,11 @@ function addProject(project)
   buttonDiv.append(projectSourceButton);
   buttonDiv.append(projectDownloadButton);
 
-  let projectNode = document.querySelector('.project-item').cloneNode();
+  let projectNode = document.createElement('div');
+  projectNode.className = "project-item";
   projectNode.append(projectImage);
-  projectNode.append(projectDesc);
   projectNode.append(projectName);
+  projectNode.append(projectDesc);
   projectNode.appendChild(buttonDiv);
 
   document.querySelector("#wrapper").append(projectNode);
