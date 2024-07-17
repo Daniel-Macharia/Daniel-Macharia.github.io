@@ -48,6 +48,14 @@ body h2{
 .project-name{
   font-family: monospace;
   font-size: large;
+  font-weight: bold;
+  color: black;
+}
+
+.project-desc{
+  font-family: sans-serif;
+  font-size: medium;
+  color: rgb(65, 65, 65);
 }
 
 .project-button-div{

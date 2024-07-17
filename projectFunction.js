@@ -14,6 +14,10 @@ function addProject(project)
   projectName.className = "project-name";
   projectName.innerText = project.name;
 
+  let projectDesc = document.createElement('p');
+  projectDesc.className = "project-desc";
+  projectDesc.innerText = project.desc;
+
   let buttonDiv = document.createElement('div');
   buttonDiv.className = "project-button-div";
 
@@ -30,6 +34,7 @@ function addProject(project)
 
   let projectNode = document.querySelector('.project-item').cloneNode();
   projectNode.append(projectImage);
+  projectNode.append(projectDesc);
   projectNode.append(projectName);
   projectNode.appendChild(buttonDiv);
 
@@ -112,7 +117,7 @@ function readCSVFile(path)
 
       for( let line of lines )
       {
-        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s]+)","([\w\s]+)","([\w\s]+)"$/, (_, one, two, three, four, five)=>{
+        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)","([\w\s]+)"$/, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
           ob.imageUrl = two;
