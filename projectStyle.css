@@ -81,8 +81,8 @@ body h2{
 
 .project-button{
   margin: 2px;
-  width: 50%;
-  height: 100%;
+  max-width: 50%;
+  max-height: 80%;
   border-radius: 0px;
   border-style: solid;
   border-width: 2px;
