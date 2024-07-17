@@ -1,31 +1,29 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  for( let i = 0; i < 10; i++ )
-  {
-    document.querySelector('#wrapper').append( getProject(i) );
-  }
+  //document.querySelector('#wrapper').append( getProject(i) );
+  readCSVFile("./data.csv");
 });
 
-function getProject(id)
+function addProject(project)
 {
   let projectImage = document.createElement('img');
   projectImage.className = "project-image";
-  projectImage.src = "images/android_icon.png";
+  projectImage.src = project.imageUrl;
 
   let projectName = document.createElement('p');
   projectName.className = "project-name";
-  projectName.innerText = `project ${id + 1}`;
+  projectName.innerText = project.name;
 
   let buttonDiv = document.createElement('div');
   buttonDiv.className = "project-button-div";
 
   let projectSourceButton = document.createElement('button');
   projectSourceButton.className = "project-button";
-  projectSourceButton.innerText = "Source Code";
+  projectSourceButton.innerText = "View Source Code";
 
   let projectDownloadButton = document.createElement('button');
   projectDownloadButton.className = "project-button";
-  projectDownloadButton.innerText = "Download App";
+  projectDownloadButton.innerText = project.desc;//"Download App";
 
   buttonDiv.append(projectSourceButton);
   buttonDiv.append(projectDownloadButton);
@@ -35,7 +33,8 @@ function getProject(id)
   projectNode.append(projectName);
   projectNode.appendChild(buttonDiv);
 
-  return projectNode;
+  document.querySelector("#wrapper").append(projectNode);
+  //return projectNode;
 }
 
 
@@ -114,10 +113,12 @@ function readCSVFile(path)
 
       for( let line of lines )
       {
-        obj = line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven)=>{
-          return JSON.stringify({"name": one, "desc": three, "githubLink": five, "downloadLink": seven});
+        if(line = "") continue;
+        obj = line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven, eight, nine)=>{
+          return JSON.stringify({"name": one, "imageUrl": three, "desc": five, "githubLink": seven, "downloadLink": nine});
         })
         console.log(JSON.stringify(obj));
+        addProject(obj);
       }
     }catch( error )
     {
@@ -129,4 +130,4 @@ function readCSVFile(path)
   });
 }
 
-readCSVFile("./data.csv");
+//readCSVFile("./data.csv");
