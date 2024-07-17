@@ -104,10 +104,16 @@ function readCSVFile(path)
 {
   fetch(path)
   .then( response => {
-    response.text();
+    return response.text();
   })
   .then( text => {
-    console.log(text);
+    try
+    {
+      console.log(text);
+    }catch( error )
+    {
+      console.log(`Error getting projects: ${error.message}`);
+    }
   })
   .catch( error => {
     console.log(`Error: ${error}`);
