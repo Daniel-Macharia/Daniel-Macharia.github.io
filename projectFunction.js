@@ -110,15 +110,14 @@ function readCSVFile(path)
     try
     {
       let lines = text.split(/\r?\n/);
+      let obj = {};
 
       for( let line of lines )
       {
-        console.log(
-          line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven)=>{
-            return JSON.stringify({"name": one, "desc": three, "githubLink": five, "downloadLink": seven});
-          })
-        );
-        console.log(`New Line: ${line}`);
+        obj = line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven)=>{
+          return JSON.stringify({"name": one, "desc": three, "githubLink": five, "downloadLink": seven});
+        })
+        console.log(JSON.stringify(obj));
       }
     }catch( error )
     {
@@ -130,4 +129,4 @@ function readCSVFile(path)
   });
 }
 
-readCSVFile("./data.txt");
+readCSVFile("./data.csv");
