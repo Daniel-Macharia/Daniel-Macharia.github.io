@@ -24,15 +24,20 @@ function addProject(project)
   let projectSourceButton = document.createElement('button');
   projectSourceButton.className = "project-button";
   projectSourceButton.innerText = "View Source Code";
-  projectSourceButton.dataset.link = project.githubLink;
+  projectSourceButton.data.link = project.githubLink;
 
   projectSourceButton.addEventListener("click", btn => {
-    let aTag = document.createElement("a");
-    aTag.href = btn.dataset.link;
-
-    document.querySelector('body').append(aTag);
-    aTag.click();
-    aTag.remove();
+    try{
+      let aTag = document.createElement("a");
+      aTag.href = btn.dataset.link;
+      
+      document.querySelector('body').append(aTag);
+      aTag.click();
+      aTag.remove();
+    }catch( error )
+    {
+      console.log(`Error loading github source code: ${error}`);
+    }
   });
 
   let projectDownloadButton = document.createElement('button');
