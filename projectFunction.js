@@ -113,10 +113,9 @@ function readCSVFile(path)
 
       for( let line of lines )
       {
-        if(line = "") continue;
-        obj = line.replace(/^"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"(,)"([\w\s]+)"$/, (_, one, two, three, four, five, six, seven, eight, nine)=>{
-          return JSON.stringify({"name": one, "imageUrl": three, "desc": five, "githubLink": seven, "downloadLink": nine});
-        })
+        obj = line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s]+)","([\w\s]+)","([\w\s]+)"$/, (_, one, two, three, four, five, six, seven, eight, nine)=>{
+          return {"name": one, "imageUrl": three, "desc": five, "githubLink": seven, "downloadLink": nine};
+        });
         console.log(JSON.stringify(obj));
         addProject(obj);
       }
