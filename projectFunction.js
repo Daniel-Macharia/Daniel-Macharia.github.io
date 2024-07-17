@@ -109,15 +109,19 @@ function readCSVFile(path)
     try
     {
       let lines = text.split(/\r?\n/);
-      let obj = {};
 
       for( let line of lines )
       {
-        obj = line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s]+)","([\w\s]+)","([\w\s]+)"$/, (_, one, two, three, four, five)=>{
-          return {"name": one, "imageUrl": two, "desc": three, "githubLink": four, "downloadLink": five};
+        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s]+)","([\w\s]+)","([\w\s]+)"$/, (_, one, two, three, four, five)=>{
+          let ob = {};
+          ob.name = one;
+          ob.imageUrl = two;
+          ob.desc = three;
+          ob.githubLink = four;
+          ob.downloadLink = five;
+          addProject(ob);
+          return ob;
         });
-        console.log(JSON.stringify(obj));
-        addProject(obj);
       }
     }catch( error )
     {
