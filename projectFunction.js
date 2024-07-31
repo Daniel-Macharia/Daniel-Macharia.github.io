@@ -47,10 +47,16 @@ function addProject(project)
 
   projectDownloadButton.addEventListener("click", clickEvent => {
     try{
-      let aTag = document.createElement("a");
-      aTag.href = clickEvent.target.getAttribute("data-downloadLink");
+      let dLink = clickEvent.target.getAttribute("data-downloadLink");
 
-      console.log(`link to download: ${aTag.href}`);
+      if( dLink == "download")
+      {
+        alert("Sorry, this app is not available for download.");
+        return;
+      }
+
+      let aTag = document.createElement("a");
+      aTag.href = dLink;
 
       document.querySelector('body').appendChild(aTag);
       aTag.click();
