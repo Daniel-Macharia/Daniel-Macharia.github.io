@@ -1,6 +1,7 @@
 
 html{
     background-color: lightsteelblue;
+    scroll-behavior: smooth;
 }
 
 body{
