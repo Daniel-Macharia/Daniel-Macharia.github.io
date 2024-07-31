@@ -26,12 +26,11 @@ function addProject(project)
   projectSourceButton.innerText = "View Source Code";
   projectSourceButton.setAttribute("data-githubLink", project.githubLink);
 
-  projectSourceButton.addEventListener("click", btn => {
+  projectSourceButton.addEventListener("click", clickEvent => {
     try{
       let aTag = document.createElement("a");
-      aTag.href = btn.target.getAttribute("data-githubLink");
+      aTag.href = clickEvent.target.getAttribute("data-githubLink");
 
-      console.log(btn.target.getAttribute("data-githubLink"));
       document.querySelector('body').append(aTag);
       aTag.click();
       aTag.remove();
@@ -44,6 +43,23 @@ function addProject(project)
   let projectDownloadButton = document.createElement('button');
   projectDownloadButton.className = "project-button";
   projectDownloadButton.innerText = "Download App";
+  projectDownloadButton.setAttribute("data-downloadLink", project.downloadLink);
+
+  projectDownloadButton.addEventListener("click", clickEvent => {
+    try{
+      let aTag = document.createElement("a");
+      aTag.href = clickEvent.target.getAttribute("data-downloadLink");
+
+      console.log(`link to download: ${aTag.href}`);
+
+      document.querySelector('body').appendChild(aTag);
+      aTag.click();
+      aTag.remove();
+    }catch( error )
+    {
+      console.log(`could not download document: ${error.message}`);
+    }
+  });
 
   buttonDiv.append(projectSourceButton);
   buttonDiv.append(projectDownloadButton);
@@ -134,7 +150,7 @@ function readCSVFile(path)
 
       for( let line of lines )
       {
-        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)","([\w\s]+)"$/, (_, one, two, three, four, five)=>{
+        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)","([\w\s\/.]+)"$/, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
           ob.imageUrl = two;
