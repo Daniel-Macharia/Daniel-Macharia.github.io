@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 /* resume functions */
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#resume-download-btn').addEventListener('click', () => {
-      console.log("Clicked donwload");
+      
       downloadResume();
   });
 });
