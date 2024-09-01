@@ -1,4 +1,4 @@
-"Easy","./images/android_assistant.jpg","An offline android assistant. Employed vosk for android to perfom speech recognition.","https://github.com/Daniel-Macharia/EazyAssist","download"
+"Easy","./images/android_assistant.jpg","An offline android assistant. Employed vosk for android to perfom speech recognition.","https://github.com/Daniel-Macharia/EazyAssist","./apps/eazy.apk"
 "Crosses and naughts","./images/tic_tac_toe.jpg","A crosses and naughts or tic-tac-toe game for android.","https://github.com/Daniel-Macharia/CrossesAndNaughts","./apps/tic_tac_toe.apk"
 "Music Cube","./images/mp3_player.jpg","A mobile music player application. Not yet complete.","https://github.com/Daniel-Macharia/Mp3Player","download"
 "Visitor management software","./images/visitor_mngmt.png","A visitor management system. Allows checking in, checking out and generation of reports.","https://github.com/Daniel-Macharia/kemri_visitor_management","download"
