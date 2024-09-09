@@ -29,7 +29,7 @@ function getFileByUrl(url)
 
 }
 
-function createResult(imageUrl, name, downloadUrl)
+function createResultDiv(imageUrl, name, downloadUrl)
 {
     let resultDiv = document.createElement("div");
     let resultImage = document.createElement("img");
@@ -65,6 +65,26 @@ function searchFile( input )
 {
     for( let i = 0; i < 20; i++ )
     {
-        document.querySelector("#result").appendChild(createResult(input, input, input));
+        let result = getResult(input);
+        document.querySelector("#result").appendChild(createResultDiv(result, result, result));//(result.imageUrl, result.name, result.downloadUrl));
     }
+}
+
+
+function getResult(inputUrl)
+{
+    fetch(inputUrl)
+    .then(response => {
+        return response.json()
+        .then(value=>{
+            console.log(`response: ${value}`);
+            return value
+        })
+        .catch(error=>{
+            console.log(`error parsing response to json ${error}`)
+        });
+    })
+    .catch(error=>{
+        console.log(`error getting response from the server ${error}`)
+    });
 }
