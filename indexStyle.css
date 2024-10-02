@@ -42,11 +42,15 @@ button:active{
 
 #option-div{
     display: none;
-    background-color: rgb(26, 152, 211);
+    background-color: lightsteelblue;/*rgb(26, 152, 211);*/
     margin-top: 48px;
     border-bottom-left-radius: 10px;
     padding: 4px;
     margin-right: 0px;
+    border-color: rgb(26, 152, 211);
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: solid;
 }
 #option-div a{
     outline-style: none;
@@ -89,7 +93,7 @@ button:active{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     min-width: 100%;
     max-width: 100%;
     top: calc(0px);
@@ -99,6 +103,14 @@ button:active{
     position: fixed;
     /*background-color: rgb(109, 140, 180);*/
     margin-left: 0px;
+    border-radius: 1px;
+    border-color: rgb(26, 152, 211);
+    border-width: 1px;
+    border-bottom-style: solid;
+}
+
+#home{
+    margin-left: 4px;
 }
 
 /* Here is the style for the menu at the top*/
@@ -120,10 +132,11 @@ button:active{
     }
 
     #menu-bar{
-    background-color: rgb(26, 152, 211);
+    /*background-color: rgb(26, 152, 211);*/
+    background-color: lightsteelblue;
     }
     .menu-item{
-        color: rgb(41, 10, 10);
+        color: rgb(26, 152, 211);/* rgb(41, 10, 10);*/
     }
 }
 
@@ -142,7 +155,7 @@ button:active{
         display: none;
     }
     #menu-bar{
-        background-color: transparent;
+        background-color: lightsteelblue;
     }
     .menu-item{
     color: rgb(26, 152, 211);

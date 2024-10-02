@@ -1,6 +1,16 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
 
+  document.querySelector("#home").addEventListener("click", event=>{
+    console.log("home is clicked")
+    let a = document.createElement("a");
+    a.href = "#home-section";
+
+    document.querySelector("body").appendChild(a);
+    a.click();
+    a.remove();
+  });
+
   document.querySelectorAll('.option').forEach(
     option => {
       option.addEventListener('click', ()=>{
