@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     document.querySelector("#download-button").addEventListener("click", ()=>{
         let aTag = document.createElement("a");
-        aTag.href = "./apps/beyond_bipolar.apk";
+        aTag.href = "./apps/Beyond_Bipolar.apk";
 
         document.querySelector("body").append(aTag);
         aTag.click();
