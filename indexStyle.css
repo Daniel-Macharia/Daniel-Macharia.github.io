@@ -1,0 +1,665 @@
+
+html{
+    background-color: lightsteelblue;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    min-height: 100dvh;
+    margin-top: 48px;
+}
+
+
+button{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(26, 152, 211);
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.5;
+}
+
+#option-div{
+    display: none;
+    background-color: lightsteelblue;/*rgb(26, 152, 211);*/
+    margin-top: 48px;
+    border-bottom-left-radius: 10px;
+    padding: 4px;
+    margin-right: 0px;
+    border-color: rgb(26, 152, 211);
+    border-width: 1px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+#option-div a{
+    outline-style: none;
+}
+
+.option{
+    padding-left: 10px;
+    padding-right: 46px;
+    padding-top: 5px;
+    font-size: medium;
+    border-top: solid;
+    border-width: 1px;
+}
+.option:hover{
+    cursor: pointer;
+}
+
+#menu-icon{  
+    margin-right: 24px;
+}
+
+
+
+#container{
+    width: 90%;
+    position: relative;
+    margin-top: 48px;
+}
+
+#cancel{
+    color: white;
+    font-size: 32px;
+    text-align: end;
+    font-family: monospace;
+    padding-right: 16px;
+    border: none;
+}
+
+#menu-bar{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 100%;
+    max-width: 100%;
+    top: calc(0px);
+    z-index: 2;
+    min-height: 48px;
+    max-height: 48px;
+    position: fixed;
+    /*background-color: rgb(109, 140, 180);*/
+    margin-left: 0px;
+    border-radius: 1px;
+    border-color: rgb(26, 152, 211);
+    border-width: 1px;
+    border-bottom-style: solid;
+}
+
+#home{
+    margin-left: 4px;
+}
+
+/* Here is the style for the menu at the top*/
+
+@media screen and (orientation: portrait) {
+    #potrait-menus{
+        display: block;
+        margin-right: 0px;
+        padding-right: 0px;
+        align-content: center;
+    }
+    #menus{
+        display: none;
+    }
+    
+    .option{
+        font-size: 32px;
+        padding-right: 100px;
+    }
+
+    #menu-bar{
+    /*background-color: rgb(26, 152, 211);*/
+    background-color: lightsteelblue;
+    }
+    .menu-item{
+        color: rgb(26, 152, 211);/* rgb(41, 10, 10);*/
+    }
+}
+
+@media  screen and (orientation: landscape) {
+    
+    #menus{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #potrait-menus{
+        display: none;
+    }
+    #menu-bar{
+        background-color: lightsteelblue;
+    }
+    .menu-item{
+    color: rgb(26, 152, 211);
+    }
+}
+
+
+.menu-item{
+    background-color: transparent;
+    padding-left: 10px;
+    padding-right: 0px;
+    font-family: Ariel;
+    font-size: 24px;
+}
+
+
+/* Here is the style for the main page content*/
+#main-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#main-content-text
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+#main-content-button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+
+
+.text{
+    text-align: start;
+    width: 300px;
+    margin-top: 8px;
+    margin-bottom: 0px;
+    color: black;
+}
+
+
+/* Here is the style for the contact info */
+.footer-contact-info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+footer{
+    max-height: 100vh;
+}
+
+#footer-main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#sign-by-author{
+    text-align: center;
+    font-family: Cantarell;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(0, 106, 155);
+}
+
+.footer-contact-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 8px;
+    align-items: center;
+}
+
+.footer-contact-item:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.footer-contact-item:active{
+    opacity: 0.5;
+}
+
+.footer-contact-item-button{
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: transparent;
+}
+
+
+
+/* css code for about section */
+
+#about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.about-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section h6{
+    font-size: larger;
+}
+
+.about-sub-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (orientation:portrait){
+    .about-sub-section img{
+        width: 60%;
+        border-radius: calc(50%);
+        padding: 0px 20px 0px 20px;
+    }
+    
+    .about-sub-section p{
+        width: 100%;
+        padding: 0px 20px 0px 20px;
+        align-items: center;
+    }
+}
+
+@media screen and (orientation:landscape){
+    .about-sub-section img{
+        width: 40%;
+        height: 40%;
+        border-radius: calc(50%);
+        margin: 5%;
+    }
+    
+    .about-sub-section p{
+        width: 40%;
+        margin: 5%;
+        align-items: center;
+    }
+}
+
+h1{
+    color: rgb(26, 152, 211);
+}
+
+#about-picture{
+    width: 40%;
+    border-radius: 50%;
+}
+
+
+/* services section style code */
+
+#services-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#my-services-division{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#my-services{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+@media screen and (orientation: portrait)
+{
+    .service{
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .service p{
+        width: 60%;
+        height: 100%;
+        margin: 10px;
+        padding: 6px;
+        align-content: center;
+    }
+    .service img{
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    .project{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        padding-top: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .project p{
+        width: 50%;
+        margin: 10px;
+        padding: 6px;
+    }
+    .project img{
+        width: 50%;
+        border-radius: 10%;
+    }
+    
+
+}
+
+@media screen and (orientation: landscape)
+{
+    .service{
+        width: 240px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project{
+        width: 240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        padding-top: 0px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project img{
+        width: 100%;
+        height: 80%;
+        border-radius: 10%;
+    }
+    .project p{
+        width: 100%;
+        margin: 10px;
+        padding: 6px;
+        text-align: center;
+    }
+
+    .service img{
+        width: 65%;
+        height: 65%;
+        border-radius: 50%;
+    }
+    .service p{
+        width: 100%;
+        margin: 10px;
+        padding: 6px;
+        align-content: center;
+    }
+    
+}
+
+
+
+#my-projects-division{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+h1{
+    color: rgb(26, 152, 211);
+    margin-bottom: 0px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: larger;
+    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#more-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f8ff;
+    border-radius:10px;
+}
+
+
+#more-projects:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+#more-projects:active{
+    opacity: 0.4;
+}
+
+/* resume section style */
+#resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#resume h1{
+    align-self: center;
+}
+
+#resume-head{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#resume-body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.resume-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 5px;
+}
+
+.resume-body-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.resume-body-section h3{
+    padding-bottom: 0px;
+}
+
+#resume-download-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(26, 152, 211);
+}
+
+#resume-download-btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#resume-download-btn:active{
+    opacity: 0.4;
+}
+
+.resume-resume-body-section{
+    width: 100%;
+}
+
+@media screen and (orientation:portrait) {
+    .resume-section{
+        width: 100%;
+    }    
+}
+
+@media screen and (orientation:landscape) {
+    .resume-section{
+        width: 45%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+.resume-title{
+    margin-bottom: 0px;
+}
+
+.resume-details{
+    margin-top: 0px;
+}
+
+.resume-details p{
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+
+/* contact style code */
+#contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-pair{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.contact-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f8ff;
+    margin: 10px;
+    width: 240px;
+}
+
+.contact-info{
+    font-family: monospace;
+    color: black;
+    font-size: large;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.contact-number{
+    font-family: monospace;
+    font-size: large;
+    color: rgb(26, 152, 211);
+    text-align: center;
+}
+
+.contact-name{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-center;
+}
+
+h1{
+    color:rgb(26, 152, 211);
+}
