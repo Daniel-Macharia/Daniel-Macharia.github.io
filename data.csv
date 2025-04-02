@@ -1,3 +1,4 @@
+"Project name","link to image","Project description","link to github repo","link to download app"
 "Ticket Generator","./images/mmust_cu_elders_dinner.png","A web app to allow downloading of tickets by attendees","https://mmust-cu-elders-dinner.vercel.app","download"
 "SOKO","./images/soko.jpg","A virtual market place, allows buyers to meet sellers online and make payments securely.","https://github.com/Daniel-Macharia/SOKO","./apps/soko.apk"
 "Easy","./images/android_assistant.jpg","An offline android assistant. Employed vosk for android to perfom speech recognition.","https://github.com/Daniel-Macharia/EazyAssist","./apps/eazy.apk"
