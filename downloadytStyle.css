@@ -1,0 +1,106 @@
+html{
+    background-color: rgb(26, 152, 211);
+    color: blue;
+}
+
+#file-download-div{
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+}
+
+#file-download-head{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#file-download-url{
+    text-align: center;
+    font-size: medium;
+    color: rgb(26, 152, 211);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-bottom: 2px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: rgb(26, 152, 211);
+    border-style: solid;
+}
+
+#file-download-button{
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(26, 152, 211);
+    color: white;
+    background-color: rgb(26, 152, 211);
+    margin-top: 8px;
+    padding: 8px;
+    font-weight: bold;
+    font-size: large;
+}
+#file-download-button:hover{
+    opacity: 0.8;
+}
+#file-download-button:active{
+    background-color: white;
+    color: rgb(26, 152, 211);
+    border-color: rgb(26, 152, 211);
+}
+
+#result{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.result-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    padding: 8px;
+    margin: 10px;
+
+}
+
+.result-name{
+    font-size: medium;
+    font-style: normal;
+    font-family: Calibri;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0px;
+    color: black;
+    max-width: 90%;
+}
+
+.result-download-button{
+    background-color: white;
+    border-radius: 2px;
+    border-style: none;
+    color: rgb(26, 152, 211);
+    font-size: medium;
+    padding: 4px;
+}
+
+.result-download-button:hover{
+    opacity: 0.8;
+}
+
+.result-download-button:active{
+    color: white;
+    background-color: rgb(182, 182, 182);
+}

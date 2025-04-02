@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="indexStyle.css"/ >
+    <script src="indexFunctionality.js" ></script>
+    <title>Daniel Macharia</title>
+</head>
+<body>
+    <div id="menu-bar">
+        <div id="home">
+            <img id="home-icon" src="images/home_icon.svg" alt="home" width="48px" height="48px" />
+        </div>
+        <div id="potrait-menus">
+            <img id="menu-icon" src="images/menu-icon.svg" width="48px" height="48px" />
+            <div id="option-div">
+                <option id="cancel" class="option" data-optionValue="cancel">X</option>
+                <option class="option" data-optionValue="about">about</option>
+                <option class="option" data-optionValue="services">services</option>
+                <option class="option" data-optionValue="resume">resume</option>
+                <option class="option" data-optionValue="contact">contact</option>
+            </div>
+        </div>
+        <div id="menus">
+            <a href="#about-section">
+                <button class="menu-item"><u>About</u></button>
+            </a>
+            <a href="#services-section">
+                <button class="menu-item"><u>Services</u></button>
+            </a>
+            <a href="#resume-section">
+                <button class="menu-item"><u>Resume</u></button>
+            </a>
+            <a href="#contact-section">
+                <button class="menu-item"><u>Contact</u></button>
+            </a>
+        </div>
+    </div>
+    <section id="home-section">
+        <div id="container">
+        
+            <div id="main-content">
+                <div id="main-content-text" >
+                    <h3 class="text" >
+                        Hello!
+                        Welcome to my portfolio.
+                    </h3>
+                    <p class="text" >
+                        I am Daniel Macharia, a software engineer based in Kakamega.
+                        <br>
+                        I major in android application development and have tailored several mobile applications including an mp3 player, 
+                        a mobile tic-tac-toe game and several others.
+                    </p>
+                    <p class="text" >
+                        I`m also a user interface designer and back-end web developer.
+                    </p>
+    
+                    <div id="main-content-button">
+                        <a href="#services-section">
+                            <button>View Work</button>
+                        </a>
+                        <a href="#contact-section">
+                            <button>Hire Me</button>
+                        </a>
+                    </div>
+                </div>
+                <div id="main-content-image" >
+                    <img src="images/android_icon.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Here is the about section -->
+    <section id="about-section">
+        <div id="about-wrapper">
+            <h1><u>About</u></h1>
+            <div id="intro" class="about-section">
+                <div class="about-sub-section">
+                    <img id="about-picture" src="images/profile_pic.jpg" alt="about me image"/>
+                    <p>
+                        <b><u>Who am I?</u></b>
+                        <br>
+                        This has often been a hard question for me to answer but I`ll try and do it here.
+                        <br>
+                        I am Daniel Ndung`u Macharia by name. Currently, a fourth year student
+                        at Masinde Muliro University of Science and Technology. I am in my final year of 
+                        study pursuing a bachelors degree in Information Technology.
+                        <br>
+                        <br>I am a software engineer in the making.
+                    </p>
+                </div>
+            </div>
+            <div class="about-section">
+                <h6>
+                    <u>
+                        Interests
+                    </u>
+                </h6>
+                <div class="about-sub-section">
+                    <img src="images/interests.avif" alt="interests image">
+                    <p>
+                        I am a technology enthusiast in love with innovation. I love exploring and finding out the 'why' and 'how' of technology.
+                        <br>
+                        I love software engineering and programming. P.S it's just a fancy way of bossing computers telling them what to do.
+                        <br>
+                        <br>
+                        I find great interest in topics such as artificial intelligence and computer security.
+                        <br>
+                        When I`m not programming, I love reading books and articles on computer science and technology.
+                        <br>
+                        I enjoy taking a walk or hanging out with friends during my free time. I also like watching movies and animations.
+                        <br>
+                        <br>
+                        Once in not so often, I engage in works of art such as drawing and composing poems.I also love frisbee and badminton but I barely play the games.
+                    </p>
+                </div>
+            </div>
+            <div class="about-section">
+                <h6>
+                    <u>
+                        Software engineering journey.
+                    </u>
+                </h6>
+                <div class="about-sub-section">
+                    <img src="images/software_engineering_image.jpg" alt="software engineering image">
+                    <p>
+                        I developed my first application in April 2023 using C++.This was after watching a series of tutorials about the windows.h library.
+                        <br>
+                        The application was the tic-tac-toe or crosses and naughts game. I uploaded the code to github months later.
+                        <br>
+                        I went through the industrial training programme offered at the University in May and June that same year.During this period, we 
+                        were introduced to desktop programming using java and javaFX, we were also introduced to android application development using java.
+                        <br>
+                        I went further into android devepment as from august that year. As a result, I created a chat application using firebase, 
+                        an mp3 player for android, and late that December, I created an android version of the tic-tac-toe.
+                        <br>
+                        Early 2024, January through May to be specific, I did my third year school project. I created an offline android assistant 
+                        using the vosk android library for speech recognition. I utilized native android libraries to accomplish tasks based on the 
+                        decoded speech e.g Intents to start phone calls and send sms, ContentResolver to query the contacts database. 
+                        I also uploaded the code to github.
+                        <br>
+                        <br>
+                        I have created several desktop applications using javaFX. These include one for visitor management.
+                        <br>
+                        Beginning may 2024, I indulged in front-end web development. Starting with this, my portfolio website, I have gained solid knowledge of javascript.
+                        <br>
+                        <br>
+                        As from October last year, I have learnt back-end web development using Django and created several web apps.
+                        <br>
+                        I am currently learning back-end web development using Java springboot.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Here is the services section -->
+    <section id="services-section">
+        <div id="services-container">
+            <h1><u>Services.</u></h1>
+            <div id="my-services-division" class="child">
+                <p class="title">
+                    I have undertaken and can comfortably take part in the following:
+                </p>
+                <div id="my-services">
+                    <div class="service">
+                        <img src="images/software_engineering.png" />
+                        <p class="service-text">
+                            <b>Software Engineering.</b>
+                            <br>
+                            I can do software analysis and design, producing comprehensive
+                            software requirements specifications, software design and
+                            software implementation report documents.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img src="images/android development.avif" />
+                        <p class="service-text">
+                            <b>Android application Design, Development and Maintenance.</b>
+                            <br>
+                            I have over a year`s experience in android development.
+                            In the Period I have created several mobile application solutions
+                            for several needs.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img src="images/relational database.png" />
+                        <p class="service-text">
+                            <b>Relational Database Design, Implementation and Maintenance.</b>
+                            <br>
+                            I have designed and administered several relational database systems
+                            in SQL.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img src="images/front end web development.png" />
+                        <p class="service-text">
+                            <b>Website Design, Development and Maintenance.</b>
+                            <br>
+                            I have designed and implemented several web sites.
+                        </p>
+                    </div>
+                    <div class="service">
+                        <img src="images/desktop app development.webp" />
+                        <p class="service-text">
+                            <b>Desktop application Design, Development and Maintenance.</b>
+                            <br>
+                            I have designed and implemented several desktop applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+     <!-- This is the projects division -->
+            <div id="my-projects-division" class="child">
+                <p class="title">
+                    Following are some of the projects I have done:
+                </p>
+    
+                <div id="my-projects">
+                    <!--
+                    <div class="project">
+                        <img src="images/android_assistant.jpg" />
+    
+                        <p class="project-text">
+                            <b>Eazy</b>
+                            <br>
+                            An offline android assistant.
+                            <br>
+                            An application that accepts user voice commands as input and perfoms the requested actions.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img src="images/mp3_player.jpg" />
+                        
+                        <p class="project-text">
+                            <b>mp3 Player</b>
+                            <br>
+                            A simple offline mp3 player.
+                            <br>
+                            It allows addition of playlists, addition of songs to playlists and playing mp3 files on your phone.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img src="images/file_downloader_app.png" />
+                        
+                        <p class="project-text">
+                            <b>A file downloader web application.</b>
+                            <br>
+                            it allows download of files at specified url. e.g pdf, video and music files.
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img src="images/github_logo.png" />
+                        
+                        <p class="project-text">
+                            <b>SOKO.</b>
+                            <br>
+                            An e-commerce website.
+                            <br>
+                            <u><i>still under construction</i></u>
+                        </p>
+                    </div>
+                    <div class="project">
+                        <img src="images/visitor_mngmt.png" />
+                        
+                        <p class="project-text">
+                            <b>Visitor Manager.</b>
+                            <br>
+                            A desktop visitor management application.
+                        </p>
+                    </div>
+                    -->
+                    <div id="more-projects" >
+                        <img src="images/more.png" />
+                        <p >
+                            <b>View projects.</b>
+                        </p>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <!-- Here is the resume section -->
+    <section id="resume-section">
+        <div id="resume">
+            <h1><u>Resume</u></h1>
+            <div id="resume-head">
+                <h2>Curriculum Vitae</h2>
+                <button id="resume-download-btn">Download CV</button>
+            </div>
+            <div id="resume-body">
+                <div class="resume-section">
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Personal Information
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                Name: Daniel Ndung`u Macharia
+                            </p>
+                            <p>
+                                Phone: 0712696965
+                            </p>
+                            <p>
+                                Email: ndungudanny444@gmail.com
+                            </p>
+                            <p>
+                                Github:
+                                <a href="https://github.com/Daniel-Macharia">
+                                    https://github.com/Daniel-Macharia
+                                </a>
+                            </p>
+                            <!-- p>
+                                Portfolio: 
+                                <a href="https://daniel-macharia.github.io">
+                                    https://daniel-macharia.github.io
+                                </a>
+                            </p -->
+                            <p>
+                                Occupation: Information Technology student at Masinde
+                                Muliro University of Science and Technology.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Summary Statement
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                A self motivated, passionate and responsible student at Masinde Muliro 
+                                University of Science and Technology. I love computer programming, networking
+                                and exploratory research especially in cyber security and artificial intelligence.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Education Background.
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                2021 September to date: Information Technology student at Masinde Muliro 
+                                University of Science and Technology, Kakamega.
+                            </p>
+                            <p>
+                                2017 - 2020: Kenya Certificate of Secondary Education. Mitahato Secondary School, Githunguri.
+                            </p>
+                            <p>
+                                2007 - 2016: Kenya Certificate of Primary Education. Nyabigege Primary School, Kisii.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Skills.
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                <ul>
+                                    <li>Systems Analysis and Design</li>
+                                    <li>Relational database design and implementation</li>
+                                    <li>Mobile Application Development(Android app development using java)</li>
+                                    <li>Front-end web design using HTML5, CSS and Javascript</li>
+                                    <li>Desktop application development using java and the javaFX API</li>
+                                    <li>Proficient in C, C++, Python and SQL</li>
+                                    <li>Proficient in git and github</li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Achievements.
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                <ul>
+                                    <li>Created a ticketing system for a Christian union event at the university.</li>
+                                    <li>
+                                        Created several mobile applications including an mp3 player,
+                                        the tic-tac-toe game and a chat application(using firebase real-time database).
+                                    </li>
+                                    <li>Created several desktop application using java and the javaFX api.</li>
+                                    <li>Designed and implemented afew relational databases using MySQL</li>
+                                    <li>Created a windows desktop application using C++ and the windows.h library</li>
+                                    <li>Created a windows sockets server using C++ and the winsock.h API.</li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="resume-section">
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Experience.
+                        </h3>
+                        <div class="resume-details">
+                            <P>
+                                February 2025 to date: Doing our final year school project with my team.
+                            </P>
+                            <p>
+                                March 2025: Created a ticketing system for the MMUST Christian Union.
+                            </p>
+                            <p>
+                                October to December 2024: Created a diary web application using Django.
+                            </p>
+                            <p>
+                                May to July 2024: Industrial attachment at KEMRI CGHR.
+                            </p>
+                            <p>
+                                May to July 2024: Created my portfolio website.
+                            </p>
+                            <p>
+                                May to July 2024: Created a desktop application for KEMRI.
+                            </p>
+                            <p>
+                                January 2024 - March 2024: Developed an offline android assistant.(My 3<sup>rd</sup> year project).
+                            </p>
+                            <p>
+                                December 2023 - February 2024: Developed a simple android game, the tic-tac-toe.
+                            </p>
+                            <p>
+                                September 2023 - December 2023: Developed an mp3 player application for android.
+                            </p>
+                            <p>
+                                August 2023 - December 2023: Developed a gender-based violence application for Kisumu Girls.
+                            </p>
+                            <p>
+                                May 2023 - July 2023: Took part and completed the industrial training program offered
+                                at Masinde Muliro University of Science and Technology.
+                            </p>
+                            <p>
+                                April 2023: Created the desktop version of the tic-tac-toe geame using C++ and windows.h library.
+                            </p>
+                            <p>
+                                April 2023: Created a windows sockets server using C++ and the winsock.h library.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Hobbies
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                In my free time, I love reading and researching to gain new knowledge. I enjoy works of art such as
+                                drawing, designing, experimenting and implementing new ways of doing things.
+    
+                            </p>
+                            <p>
+                                I also love making new friends, talking to friends and family, watching animations and movies and listening to music
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                            Languages
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                <ul>
+                                    <li>
+                                        English
+                                    </li>
+                                    <li>
+                                        Swahili
+                                    </li>
+                                </ul>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="resume-body-section">
+                        <h3 class="resume-title">
+                           Referees.
+                        </h3>
+                        <div class="resume-details">
+                            <p>
+                                Name: Dr. Raphael Angulu
+                            <br>
+                                Phone: 0729260641
+                            <br>
+                                Email: rangulu@mmust.ac.ke
+                            <br>
+                                Occupation: Lecturer and Head of Department, Depart of Information Technology, School of Computing and Informatics.
+                            </p>
+                            <p>
+                                Name: Dr. Jasper Ondulo
+                                <br>
+                                Phone: 0727716382
+                                <br>
+                                Email: opiyo7@yahoo.com
+                                <br>
+                                Occupation: Lecturer and Head of Department, Department of Computer Science, School of Computing and Informatics.
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Here is the contact section -->
+    <section id="contact-section">
+        <div id="contact-container">
+            <h1><u>My Contacts.</u></h1>
+            <h3>
+                You can reach me through:
+            </h3>
+            <div class="contact-pair">
+                <div id="phone-call" class="contact-item">
+                    <div class="contact-name">
+                        <img width="32px" src="images/phone.png" />
+                        <p class="contact-info">
+                            Phone calls.
+                        </p>
+                    </div>
+                    <p class="contact-number">
+                        +254 712696965
+                    </p>
+                </div>
+                <div id="whatsapp-messenger" class="contact-item">
+                    <div class="contact-name">
+                        <img width="32px" src="images/whatsapp.png" />
+                        <p class="contact-info">
+                            Whats App messenger.
+                        </p>
+                    </div>
+                    <p class="contact-number">
+                        0712696965
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+<footer>
+    <div id="footer-main-container">
+        <div class="footer-contact-info">
+            <div class="footer-contact-item" data-destination-url="linkedIn">
+                <img src="images/linked_in_logo.png" width="32px" height="32px"/>
+                <button class="footer-contact-item-button">Linked In</button>
+            </div>
+            <div class="footer-contact-item" data-destination-url="email">
+                <img src="images/email_logo.png" width="32px" height="32px"/>
+                <button class="footer-contact-item-button">Email</button>
+            </div>
+            <div class="footer-contact-item" data-destination-url="github">
+                <img src="images/github_logo.png" width="32px" height="32px"/>
+                <button class="footer-contact-item-button" >Github</button>
+            </div>
+            
+        </div>
+        <div>
+            <p id="sign-by-author">
+                Prepared with &#10084; by Daniel Ndung'u Macharia.
+            </p>
+        </div>
+    </div>
+</footer>
+</html>
