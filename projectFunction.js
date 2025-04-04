@@ -153,9 +153,10 @@ function readCSVFile(path)
     try
     {
       let lines = text.split(/\r?\n/);
-
+      
       for( let line of lines )
       {
+        console.log(line);
         line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)","([\w\s\/.]+)"$/, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
