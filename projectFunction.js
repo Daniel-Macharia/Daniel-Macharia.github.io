@@ -163,6 +163,7 @@ function readCSVFile(path)
           ob.desc = three;
           ob.githubLink = four;
           ob.downloadLink = five;
+          console.log(ob);
           addProject(ob);
           return ob;
         });
