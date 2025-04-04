@@ -156,7 +156,6 @@ function readCSVFile(path)
       
       for( let line of lines )
       {
-        console.log(line);
         line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)","([\w\s\/.]+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)"$/, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
@@ -164,7 +163,6 @@ function readCSVFile(path)
           ob.desc = three;
           ob.githubLink = four;
           ob.downloadLink = five;
-          console.log(ob);
           addProject(ob);
           return ob;
         });
