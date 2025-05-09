@@ -156,7 +156,7 @@ function readCSVFile(path)
       
       for( let line of lines )
       {
-        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)","(.\/apps\/\w+.apk)|([\w\s\/.]+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)"$/, (_, one, two, three, four, five)=>{
+        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)","(\.\/apps\/\w+\.apk)|([\w\s\/.]+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)"$/, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
           ob.imageUrl = two;
