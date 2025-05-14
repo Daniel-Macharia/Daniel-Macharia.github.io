@@ -153,10 +153,13 @@ function readCSVFile(path)
     try
     {
       let lines = text.split(/\r?\n/);
+      let regex1 = /^"([\w\s]+)","(\.\/images\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)","(\.\/apps\/\w+\.apk)|([\w\s\.]+)"$/;
+        let regex2 = /^"([\w\s]+)","(\.\/images\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/mmust-cu-elders-dinner\.vercel\.app)","(https:\/\/mmust-cu-elders-dinner\.vercel\.app)"$/;
+        let regex3 = /^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/[\w-\/.]+)","([\w\s-\/.:]+)"$/;
       
       for( let line of lines )
       {
-        line.replace(/^"([\w\s]+)","(\.\/\w+\/\w+\.\w+)","([\w\s-\.,]+)","(https:\/\/github\.com\/Daniel-Macharia\/\w+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)","(\.\/apps\/\w+\.apk)|([\w\s\/.]+)|(https:\/\/mmust-cu-elders-dinner.vercel.app)"$/, (_, one, two, three, four, five)=>{
+        line.replace( regex3, (_, one, two, three, four, five)=>{
           let ob = {};
           ob.name = one;
           ob.imageUrl = two;
